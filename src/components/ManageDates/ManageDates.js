@@ -20,7 +20,7 @@ const ManageDates = ({ user, onBack }) => {
 
   useEffect(() => {
     getDates().then(dates => {
-      const filter = dates.filter(date => date.trainer === user.name)
+      const filter = dates.filter(date => date.entrenador === user.name)
       setDates(filter);
     }).catch(() => setBills([]))
   }, []);
@@ -31,7 +31,7 @@ const ManageDates = ({ user, onBack }) => {
 
   return (
     <View style={styles.container}>
-      <List onPress={handleDate} titleKey="client" data={dates}/>
+      <List onPress={handleDate} titleKey="cliente" data={dates}/>
       <MyButton title="Regresar" onPress={onBack}/>
     </View>
   )

@@ -127,9 +127,8 @@ const ManageRoutines = ({ user, onBack }) => {
     })
   }
 
-  console.log(exercises)
-
   const handleRoutine = routine => {
+    console.log(routine)
     setSelectedRoutine(routine);
   }
 
@@ -168,7 +167,7 @@ const ManageRoutines = ({ user, onBack }) => {
   return (
     <View style={styles.container}>
       {
-        selectedRoutine ?
+        selectedRoutine && selectedRoutine.exercises ?
           <Routine user={user} onDelete={handleDelete} onBack={onBackRoutine} routine={selectedRoutine.exercises}/> :
           <>
             <List onPress={handleRoutine} titleKey="cliente" data={routines}/>

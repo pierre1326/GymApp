@@ -7,6 +7,8 @@ const Routine = ({ user, routine, onBack, onDelete }) => {
     console.log(routine)
   }
 
+  console.log(routine)
+
   return (
     <>
       <List onPress={handlePress} titleKey="day" data={routine}/>

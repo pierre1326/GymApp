@@ -27,7 +27,6 @@ const capitalizeFirstLetter = string => {
 };
 
 const ListElement = ({ data, titleKey, onPress }) => {
-  console.log(data)
   return (
     <Pressable onPress={() => onPress(data)}>
       <View style={styles.listElement}>

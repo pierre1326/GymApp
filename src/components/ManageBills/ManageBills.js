@@ -91,7 +91,7 @@ const ManageBills = ({ onBack }) => {
         changeVisiblity()
         Toast.show({
           type: 'success',
-          text1: 'Nuevo horario',
+          text1: 'Nueva factura',
           text2: 'Se logro agregar la factura correctamente'
         })
         getBills().then(bills => setBills(bills)).catch(() => setBills([]))
@@ -151,8 +151,8 @@ const ManageBills = ({ onBack }) => {
       >
         <MyPicker name="cliente" items={clients} />
         <MyTextInput name="fecha" placeHolder="Ingrese la fecha" />
-        <MyTextInput name="Monto" placeHolder="Ingrese el monto" keyboardType="numeric" />
-        <MyTextInput name="Motivo" placeHolder="Motivo de la factura" />
+        <MyTextInput name="monto" placeHolder="Ingrese el monto" keyboardType="numeric" />
+        <MyTextInput name="motivo" placeHolder="Motivo de la factura" />
         {selectedBill ? <MyButton title="Eliminar factura" onPress={handleDelete} /> : null}
       </ModalForm>
     </View>

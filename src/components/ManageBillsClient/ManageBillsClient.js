@@ -20,7 +20,7 @@ const ManageBillsClient = ({ user, onBack }) => {
 
   useEffect(() => {
     getBills().then(bills => {
-      const filter = bills.filter(bill => bill.client === user.name)
+      const filter = bills.filter(bill => bill.cliente === user.name)
       setBills(filter);
     }).catch(() => setBills([]))
   }, []);
@@ -31,7 +31,7 @@ const ManageBillsClient = ({ user, onBack }) => {
 
   return (
     <View style={styles.container}>
-      <List onPress={handleBill} titleKey="description" data={bills}/>
+      <List onPress={handleBill} titleKey="motivo" data={bills}/>
       <MyButton title="Regresar" onPress={onBack}/>
     </View>
   )
