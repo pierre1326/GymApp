@@ -84,7 +84,7 @@ const ManageRoutines = ({ user, onBack }) => {
       exercises: processExercises(exercises),
       fecha: new Date().toUTCString(),
       entrenador: user.name,
-      client: form.client,
+      cliente: form.cliente,
     }
     insertRoutine(routine).then(result => {
       changeVisiblity()
@@ -171,7 +171,7 @@ const ManageRoutines = ({ user, onBack }) => {
         selectedRoutine ?
           <Routine user={user} onDelete={handleDelete} onBack={onBackRoutine} routine={selectedRoutine.exercises}/> :
           <>
-            <List onPress={handleRoutine} titleKey="client" data={routines}/>
+            <List onPress={handleRoutine} titleKey="cliente" data={routines}/>
             <MyButton title="Agregar" onPress={addRoutine}/>
             <MyButton title="Regresar" onPress={onBack}/>
             <ModalForm
@@ -184,7 +184,7 @@ const ManageRoutines = ({ user, onBack }) => {
               visible={visible}
               defaultForm={selectedRoutine}
             >
-              <MyPicker name="client" items={clients} />
+              <MyPicker name="cliente" items={clients} />
               <MyTextInput name="duracion (m)" placeHolder="Duracion aproximada (m)" keyboardType="numeric" />
               <MyPicker name="dia" items={['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo']} />
               <MyTextInput name="ejercicio" placeHolder="Ingrese el siguiente ejercicio de la rutina" />

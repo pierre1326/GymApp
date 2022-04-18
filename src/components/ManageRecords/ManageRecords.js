@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
 const filterRecords = (records, user) => {
   console.log(records)
-  return records.filter(record => record.trainer === user.name)
+  return records.filter(record => record.entrenador === user.name)
 }
 
 const ManageRecords = ({ user, onBack }) => {

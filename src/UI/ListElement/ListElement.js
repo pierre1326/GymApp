@@ -27,13 +27,14 @@ const capitalizeFirstLetter = string => {
 };
 
 const ListElement = ({ data, titleKey, onPress }) => {
+  console.log(data)
   return (
     <Pressable onPress={() => onPress(data)}>
       <View style={styles.listElement}>
         <Text style={styles.subtitle}>{data[titleKey]}</Text>
         {Object.keys(data).map(key => {   
           if(key !== 'key' && key !== titleKey && typeof data[key] !== 'object') {
-            return <Text key={data[key]} style={styles.text}>{`${capitalizeFirstLetter(key)}: ${data[key]}`}</Text>
+            return <Text key={key} style={styles.text}>{`${capitalizeFirstLetter(key)}: ${data[key]}`}</Text>
           }
           return null;
         })}

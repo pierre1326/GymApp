@@ -59,7 +59,7 @@ const HomeScreen = () => {
 
   const [form, setForm] = useState({});
   const [visible, setVisible] = useState(false);
-  const [user, setUser] = useState({type: 'Entrenador', name: 'Pierre'});
+  const [user, setUser] = useState({type: 'Cliente', name: 'Cliente'});
 
   const changeVisiblity = () => {
     setVisible(visible => !visible);

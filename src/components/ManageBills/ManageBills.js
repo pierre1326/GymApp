@@ -138,7 +138,7 @@ const ManageBills = ({ onBack }) => {
 
   return (
     <View style={styles.container}>
-      <List onPress={handleBill} titleKey="client" data={bills}/>
+      <List onPress={handleBill} titleKey="cliente" data={bills}/>
       <MyButton title="Agregar" onPress={addBill}/>
       <MyButton title="Regresar" onPress={onBack}/>
       <ModalForm
@@ -149,10 +149,10 @@ const ManageBills = ({ onBack }) => {
         visible={visible}
         defaultForm={selectedBill}
       >
-        <MyPicker name="client" items={clients} />
-        <MyTextInput name="date" placeHolder="Ingrese la fecha" />
-        <MyTextInput name="price" placeHolder="Ingrese el monto" keyboardType="numeric" />
-        <MyTextInput name="description" placeHolder="Motivo de la factura" />
+        <MyPicker name="cliente" items={clients} />
+        <MyTextInput name="fecha" placeHolder="Ingrese la fecha" />
+        <MyTextInput name="Monto" placeHolder="Ingrese el monto" keyboardType="numeric" />
+        <MyTextInput name="Motivo" placeHolder="Motivo de la factura" />
         {selectedBill ? <MyButton title="Eliminar factura" onPress={handleDelete} /> : null}
       </ModalForm>
     </View>
